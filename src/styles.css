@@ -8,4 +8,10 @@
 @media(max-width:560px){.input-wrap input{width:auto;flex:1 1 auto}}
 @media(max-width:560px){.input-wrap input{width:0!important;min-width:0!important;flex:1 1 auto}}
 @media(max-width:560px){.input-wrap input{max-width:calc(100% - 45px)!important}}
+/* Final polish: use the approved Ninja visual in the first viewport and keep section transitions quiet. */
+.hero-image{background-image:linear-gradient(90deg,#050708f4 0%,#050708c9 39%,#05070836 78%,#05070812),linear-gradient(0deg,#050708 0%,transparent 43%),url('/assets/hero-ninja.jpg')!important;background-position:center 44%}
+.stats{background:linear-gradient(180deg,#081011,#050708)}
+.auction-feature,.process{position:relative;overflow:hidden}
+.auction-feature:before,.process:before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.35}
+@media(max-width:560px){.hero{min-height:660px;padding-top:100px;padding-bottom:72px}.hero-image{background-position:54% center}.section{padding-top:62px;padding-bottom:62px}.intro-copy{margin-top:25px}.auction-feature{padding-top:52px;padding-bottom:52px}.featured{padding-top:68px}.process{padding-top:62px;padding-bottom:62px}.cta{padding-top:78px;padding-bottom:80px}.page-hero{padding-top:92px;padding-bottom:40px}.catalog-wrap{padding-bottom:80px}.auction-board{padding-top:35px;padding-bottom:70px}.auction-timeline{padding-top:20px;padding-bottom:72px}.application-section{padding-top:65px;padding-bottom:85px}.simple-content,.contact-layout{padding-top:50px;padding-bottom:85px}footer{padding-top:30px}}
  .hero-image{background-image:linear-gradient(90deg,#050708f7 0%,#050708bd 42%,#05070818 100%),linear-gradient(0deg,#050708 0%,transparent 40%),url('/assets/hero-ninja.jpg')!important}
