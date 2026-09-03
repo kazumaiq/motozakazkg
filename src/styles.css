@@ -8,3 +8,4 @@
 @media(max-width:560px){.input-wrap input{width:auto;flex:1 1 auto}}
 @media(max-width:560px){.input-wrap input{width:0!important;min-width:0!important;flex:1 1 auto}}
 @media(max-width:560px){.input-wrap input{max-width:calc(100% - 45px)!important}}
+ .hero-image{background-image:linear-gradient(90deg,#050708f7 0%,#050708bd 42%,#05070818 100%),linear-gradient(0deg,#050708 0%,transparent 40%),url('/assets/hero-ninja.jpg')!important}
