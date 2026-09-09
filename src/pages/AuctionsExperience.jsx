@@ -33,7 +33,7 @@ export default function AuctionsExperience({ id, Layout, Eyebrow, Button, Icon, 
   const [lots, setLots] = useState([]);
   const [options, setOptions] = useState({ brands: [], models: [], auctions: [], years: [], statuses: [], engines: [], mileages: [], prices: [] });
   const [query, setQuery] = useState(new URLSearchParams(window.location.search).get('q') || '');
-  const [filters, setFilters] = useState({ ...emptyFilters });
+  const [filters, setFilters] = useState(() => Object.fromEntries(Object.keys(emptyFilters).map((key) => [key, new URLSearchParams(window.location.search).get(key) || ''])));
   const [sort, setSort] = useState(new URLSearchParams(window.location.search).get('sort') || 'newest');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [state, setState] = useState('loading');
