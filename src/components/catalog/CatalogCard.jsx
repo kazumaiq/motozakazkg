@@ -4,7 +4,7 @@ const formatNumber = (value) => new Intl.NumberFormat('ru-RU').format(Math.round
 
 export default function CatalogCard({ bike, onOpen }) {
   const status = labels[bike.status] || bike.status;
-  const image = bike.images?.[0];
+  const image = typeof bike.images?.[0] === 'string' ? bike.images[0] : bike.images?.[0]?.url;
 
   return (
     <article className="inventory-card">

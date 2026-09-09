@@ -6,7 +6,7 @@ const formatNumber = (value) => new Intl.NumberFormat('ru-RU').format(Math.round
 const price = (bike) => `${bike.currency === 'USD' ? '$' : '¥'} ${formatNumber(bike.estimatedKyrgyzstanPrice)}`;
 
 function Gallery({ bike }) {
-  const images = bike.images?.filter(Boolean) || [];
+  const images = bike.images?.map((image) => typeof image === 'string' ? image : image?.url).filter(Boolean) || [];
   const [active, setActive] = useState(0);
   const [lightbox, setLightbox] = useState(false);
   const [touchStart, setTouchStart] = useState(null);

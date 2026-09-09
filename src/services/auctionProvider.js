@@ -2,7 +2,7 @@ const normalize = (bike) => ({
   id: bike.id,
   motorcycle: bike,
   lotNumber: bike.lotNumber || null,
-  auctionHouse: bike.auctionHouse || null,
+  auctionHouse: bike.auctionHouse || bike.auction || null,
   location: bike.auctionLocation || null,
   auctionDate: bike.auctionDate || null,
   grade: bike.grade || null,
