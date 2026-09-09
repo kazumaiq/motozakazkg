@@ -427,3 +427,122 @@ h1, h2, h3, p { word-break: normal; overflow-wrap: normal; hyphens: none; }
   .catalog-cta { width: calc(100% - 32px); margin-bottom: 72px; padding: 28px 22px; display: grid; }
   .catalog-cta h2 { font-size: 35px; }
 }
+
+/* Motorcycle detail product page. */
+:root { --header-height: 68px; }
+.lightbox-is-open { overflow: hidden; }
+.detail-page { width: min(var(--content-max), calc(100% - 48px)); margin: 0 auto; padding-top: calc(var(--header-height) + 34px); padding-bottom: 110px; }
+.detail-breadcrumb { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; color: var(--color-muted); font: 10px 'DM Mono'; }
+.detail-breadcrumb a { color: var(--color-ink); }
+.detail-breadcrumb a:hover { color: var(--color-accent-dark); }
+.detail-product { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr); gap: clamp(42px, 6vw, 92px); align-items: start; }
+.detail-gallery-new { min-width: 0; }
+.detail-gallery-main { position: relative; overflow: hidden; aspect-ratio: 1.18 / 1; border-radius: var(--radius-xl); background: var(--color-surface-muted); }
+.detail-gallery-main > button:not(.gallery-control) { width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+.detail-gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-control { position: absolute; top: 50%; display: grid; place-items: center; width: 44px; height: 44px; transform: translateY(-50%); border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: rgba(255,255,255,.8); color: var(--color-ink); font-size: 19px; cursor: pointer; }
+.gallery-control:hover { background: var(--color-accent); border-color: var(--color-accent); }
+.gallery-prev { left: 16px; }
+.gallery-next { right: 16px; }
+.detail-gallery-meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; color: var(--color-muted); font: 9px 'DM Mono'; }
+.detail-thumbs { display: flex; gap: 8px; margin-top: 14px; overflow-x: auto; }
+.detail-thumbs button { flex: 0 0 66px; width: 66px; height: 52px; padding: 0; overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-control); background: var(--color-surface); cursor: pointer; }
+.detail-thumbs button.is-active { border-color: var(--color-accent-dark); }
+.detail-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.detail-identity { padding-top: 18px; }
+.detail-demo-label { display: inline-block; margin-bottom: 15px; color: var(--color-accent-dark); font: 9px 'DM Mono'; letter-spacing: .08em; }
+.detail-identity h1 { margin: 0; color: var(--color-ink); font-size: clamp(56px, 6vw, 88px); line-height: .9; letter-spacing: -.09em; }
+.detail-identity h1 small { margin-left: 10px; color: var(--color-accent-dark); font: 11px 'DM Mono'; letter-spacing: 0; vertical-align: top; }
+.detail-description { max-width: 500px; margin: 26px 0; color: var(--color-muted); font-size: 18px; line-height: 1.7; }
+.detail-price-new { padding: 20px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.detail-price-new span, .detail-price-new small { display: block; color: var(--color-muted); font: 9px 'DM Mono'; }
+.detail-price-new strong { display: block; margin: 10px 0 7px; color: var(--color-ink); font-size: 36px; letter-spacing: -.06em; }
+.detail-price-new small { max-width: 430px; line-height: 1.6; }
+.detail-status { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; color: var(--color-accent-dark); font: 10px 'DM Mono'; text-transform: uppercase; }
+.detail-status i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-accent); }
+.detail-actions-new { display: grid; gap: 9px; margin-top: 26px; }
+.detail-spec-section, .detail-auction-section, .detail-sheet-section, .detail-trust-section, .detail-delivery-section, .detail-request-section, .detail-related { margin-top: 104px; padding-top: 28px; border-top: 1px solid var(--color-border); }
+.detail-section-kicker { color: var(--color-accent-dark); font: 10px 'DM Mono'; letter-spacing: .1em; }
+.detail-spec-grid-new { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 34px; }
+.detail-spec-grid-new div { padding: 18px 20px 18px 0; border-bottom: 1px solid var(--color-border); }
+.detail-spec-grid-new span, .auction-facts-new span, .sheet-facts-new span { display: block; color: var(--color-muted); font: 9px 'DM Mono'; text-transform: uppercase; }
+.detail-spec-grid-new strong, .auction-facts-new strong, .sheet-facts-new strong { display: block; margin-top: 8px; color: var(--color-ink); font-size: 17px; }
+.detail-auction-section { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
+.detail-auction-section h2, .detail-sheet-section h2, .detail-trust-section h2, .detail-request-section h2, .detail-related h2 { margin: 15px 0 0; color: var(--color-ink); font-size: clamp(38px, 4.6vw, 64px); line-height: .96; letter-spacing: -.08em; }
+.detail-auction-section h2 span, .detail-sheet-section h2 span, .detail-trust-section h2 span, .detail-request-section h2 span, .detail-related h2 span { color: var(--color-accent-dark); }
+.detail-auction-section p, .detail-sheet-section p, .detail-request-section p { max-width: 430px; color: var(--color-muted); font-size: 16px; line-height: 1.7; }
+.auction-facts-new { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--color-border); }
+.auction-facts-new div { padding: 18px 0; border-bottom: 1px solid var(--color-border); }
+.detail-sheet-layout { display: grid; grid-template-columns: minmax(260px, .7fr) 1fr; gap: 80px; align-items: center; margin-top: 38px; }
+.detail-sheet-visual { padding: 22px; border-radius: var(--radius-card); background: var(--color-surface); box-shadow: 0 14px 34px rgba(11,17,19,.07); }
+.detail-sheet-visual img { display: block; width: 100%; max-height: 480px; object-fit: contain; }
+.sheet-facts-new { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+.sheet-facts-new strong { font-size: 15px; }
+.detail-trust-section { display: grid; grid-template-columns: .7fr 1.3fr; gap: 80px; }
+.trust-list-new { border-top: 1px solid var(--color-border); }
+.trust-list-new > div { display: grid; grid-template-columns: 50px 1fr; gap: 16px; padding: 19px 0; border-bottom: 1px solid var(--color-border); }
+.trust-list-new > div > span { color: var(--color-accent-dark); font: 10px 'DM Mono'; }
+.trust-list-new strong { color: var(--color-ink); font-size: 17px; }
+.trust-list-new p { margin: 6px 0 0; color: var(--color-muted); font-size: 13px; line-height: 1.5; }
+.detail-delivery-section { overflow: hidden; }
+.delivery-route-new { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 38px; }
+.delivery-route-new > div { position: relative; min-height: 80px; padding-right: 20px; }
+.delivery-route-new span { display: block; color: var(--color-accent-dark); font: 10px 'DM Mono'; }
+.delivery-route-new strong { display: block; margin-top: 13px; color: var(--color-ink); font: 12px 'DM Mono'; letter-spacing: .08em; }
+.delivery-route-new i { position: absolute; top: 6px; left: 35px; right: 18px; height: 1px; background: var(--color-border); }
+.detail-request-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: start; }
+.detail-related-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 28px; }
+.detail-related .inventory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.detail-mobile-cta { display: none; }
+.detail-lightbox { position: fixed; z-index: 80; inset: 0; display: grid; place-items: center; padding: 30px; background: rgba(11,17,19,.92); }
+.detail-lightbox img { max-width: min(100%, 1100px); max-height: 90vh; object-fit: contain; }
+.detail-lightbox-close { position: absolute; top: 20px; right: 20px; display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; background: rgba(255,255,255,.1); color: #fff; font-size: 30px; cursor: pointer; }
+.detail-skeleton-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 80px; padding-top: 30px; }
+.detail-skeleton-image, .detail-skeleton-line, .detail-skeleton-copy { background: linear-gradient(110deg, #edf1f2 8%, #fff 18%, #edf1f2 33%); background-size: 200% 100%; animation: inventory-shimmer 1.2s linear infinite; border-radius: var(--radius-card); }
+.detail-skeleton-image { min-height: 560px; }
+.detail-skeleton-line { height: 42px; margin: 60px 0 18px; }
+.detail-skeleton-line.short { width: 62%; margin-top: 0; }
+.detail-skeleton-copy { height: 150px; margin-top: 38px; }
+.detail-state { min-height: 560px; display: grid; align-content: center; justify-items: start; gap: 18px; }
+.detail-state h1 { margin: 0; color: var(--color-ink); font-size: clamp(42px, 6vw, 78px); letter-spacing: -.08em; }
+
+@media (max-width: 900px) { .detail-product { grid-template-columns: 1fr; gap: 30px; } .detail-identity { padding-top: 0; } .detail-auction-section, .detail-trust-section, .detail-request-section { gap: 42px; } .detail-sheet-layout { gap: 35px; } }
+@media (max-width: 560px) {
+  :root { --header-height: 64px; }
+  .detail-page { width: calc(100% - 32px); padding-top: calc(var(--header-height) + 20px); padding-bottom: 110px; }
+  .detail-breadcrumb { margin-bottom: 16px; }
+  .detail-gallery-main { aspect-ratio: .94 / 1; border-radius: var(--radius-card); }
+  .detail-gallery-meta { font-size: 8px; }
+  .detail-identity h1 { font-size: clamp(48px, 14vw, 63px); line-height: .95; }
+  .detail-description { margin: 19px 0; font-size: 17px; line-height: 1.65; }
+  .detail-price-new strong { font-size: 31px; }
+  .detail-spec-section, .detail-auction-section, .detail-sheet-section, .detail-trust-section, .detail-delivery-section, .detail-request-section, .detail-related { margin-top: 72px; padding-top: 22px; }
+  .detail-spec-grid-new { grid-template-columns: 1fr 1fr; margin-top: 20px; }
+  .detail-spec-grid-new div { padding: 15px 10px 15px 0; }
+  .detail-spec-grid-new strong { font-size: 15px; }
+  .detail-auction-section, .detail-trust-section, .detail-request-section { display: block; }
+  .detail-auction-section h2, .detail-sheet-section h2, .detail-trust-section h2, .detail-request-section h2, .detail-related h2 { font-size: clamp(36px, 10.5vw, 48px); }
+  .detail-auction-section p, .detail-sheet-section p, .detail-request-section p { font-size: 15px; }
+  .auction-facts-new { margin-top: 28px; }
+  .auction-facts-new strong { font-size: 14px; }
+  .detail-sheet-layout { display: flex; flex-direction: column; align-items: stretch; gap: 30px; margin-top: 25px; }
+  .detail-sheet-visual { padding: 14px; }
+  .detail-sheet-visual img { max-height: 390px; }
+  .sheet-facts-new { grid-template-columns: 1fr 1fr; gap: 18px 12px; }
+  .detail-trust-section > div:first-child { margin-bottom: 28px; }
+  .trust-list-new > div { grid-template-columns: 40px 1fr; }
+  .delivery-route-new { display: flex; flex-direction: column; margin-top: 26px; }
+  .delivery-route-new > div { min-height: 62px; padding-left: 35px; }
+  .delivery-route-new i { top: 23px; left: 7px; right: auto; width: 1px; height: 45px; }
+  .delivery-route-new strong { margin-top: 6px; }
+  .detail-request-section .application-form { margin-top: 30px; }
+  .detail-related-head { align-items: start; flex-direction: column; }
+  .detail-related .inventory-grid { grid-template-columns: 1fr; }
+  .detail-mobile-cta { position: fixed; z-index: 45; right: 0; bottom: 0; left: 0; display: block; padding: 10px 16px max(10px, env(safe-area-inset-bottom)); border-top: 1px solid var(--color-border); background: rgba(246,247,248,.94); backdrop-filter: blur(16px); }
+  .detail-mobile-cta .button { width: 100%; min-height: 46px; }
+  .detail-skeleton-grid { display: block; padding-top: 0; }
+  .detail-skeleton-image { min-height: 360px; }
+  .detail-skeleton-line { margin-top: 35px; }
+  .detail-state { min-height: 520px; }
+  .detail-state h1 { font-size: 45px; }
+}
