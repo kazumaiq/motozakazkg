@@ -169,6 +169,7 @@ footer { border-color: var(--color-border); }
   filter: saturate(.82) contrast(1.03);
   transform: translateX(2%);
 }
+.hero-image picture { display: block; width: 100%; height: 100%; }
 .hero-route {
   position: relative;
   inset: auto;
