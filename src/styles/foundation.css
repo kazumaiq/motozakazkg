@@ -1,0 +1,135 @@
+/* MotoZakKG v2 foundation. Legacy page rules remain available while sections migrate. */
+html, body { background: var(--color-bg); color: var(--color-ink); }
+body { font-family: Manrope, sans-serif; }
+body:before { background: radial-gradient(circle at 80% 0%, rgba(32,209,227,.11), transparent 28%), radial-gradient(circle at 8% 65%, rgba(11,17,19,.04), transparent 30%); }
+body.menu-is-open { overflow: hidden; }
+a { color: inherit; }
+
+.site-header {
+  top: 20px;
+  height: 68px;
+  width: min(var(--content-max), calc(100% - 48px));
+  padding: 0 var(--space-3);
+  border: 1px solid rgba(11,17,19,.1);
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 14px 34px rgba(11,17,19,.08);
+  backdrop-filter: blur(18px);
+}
+.brand { min-width: 150px; }
+.brand img { width: 138px; height: 48px; mix-blend-mode: multiply; }
+.site-header nav { gap: 20px; }
+.site-header nav > a { color: var(--color-muted); font-size: 11px; font-weight: 600; }
+.site-header nav > a:hover, .desktop-phone:hover { color: var(--color-accent-dark); }
+.desktop-phone { color: var(--color-ink-soft); }
+.button { min-height: 46px; border-radius: var(--radius-control); padding: 13px 18px; background: var(--color-ink); color: #fff; border-color: var(--color-ink); }
+.button:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-ink); box-shadow: 0 10px 22px rgba(32,209,227,.22); }
+.button.ghost { color: var(--color-ink); border-color: var(--color-border); background: rgba(255,255,255,.55); }
+.button.ghost:hover { color: var(--color-ink); border-color: var(--color-accent); background: var(--color-accent); }
+.menu { color: var(--color-ink); }
+
+.hero { min-height: 720px; height: min(860px, 100svh); padding: 150px max(24px, calc((100vw - var(--content-max))/2)) 96px; background: var(--color-bg); }
+.hero-image { background-image: linear-gradient(90deg, rgba(246,247,248,.98) 0%, rgba(246,247,248,.88) 35%, rgba(246,247,248,.08) 75%), url('/assets/hero-generated.png') !important; background-position: 72% center; background-size: cover; filter: saturate(.82) contrast(.96); }
+.hero-image:after { background: linear-gradient(120deg, transparent 30%, rgba(32,209,227,.13) 72%, transparent 92%); }
+.hero-content { max-width: 590px; }
+.eyebrow { color: var(--color-accent-dark); font-weight: 600; }
+.eyebrow i { background: var(--color-accent); box-shadow: none; }
+.hero h1 { font-size: clamp(56px, 7vw, 104px); line-height: .94; letter-spacing: -.08em; color: var(--color-ink); }
+.hero h1 span, .hero h1 em { color: var(--color-accent-dark); }
+.hero-content > p { color: var(--color-muted); max-width: 500px; }
+.hero-route { color: var(--color-muted); }
+.hero-route i { background: var(--color-accent); box-shadow: none; }
+.hero-numbers { color: var(--color-muted); }
+.hero-numbers b { color: var(--color-ink); }
+.hero:after { background: linear-gradient(180deg, transparent, var(--color-bg)); }
+.hero + .stats { background: var(--color-surface); border-color: var(--color-border); }
+.stats div { border-color: var(--color-border); }
+.stats strong { color: var(--color-ink); }
+.stats strong span { color: var(--color-accent-dark); }
+.stats small, .muted { color: var(--color-muted); }
+
+.section { padding: var(--space-9) 0; }
+.intro h2, .featured h2, .process h2, .cta h2, .auction-intro h2, .auction-timeline h2, .page-hero h1 { color: var(--color-ink); }
+h2 span, .page-hero h1 span { color: var(--color-accent-dark); }
+.intro-copy p, .auction-intro p, .process p, .cta p, .sheet-side p, .lot-info p, .simple-content p { color: var(--color-muted); }
+.auction-feature { background: linear-gradient(120deg, #eef3f4, #fff); }
+.auction-card, .bike-card, .calc-result, .settings-card, .admin-box { background: var(--color-surface); border-color: var(--color-border); border-radius: var(--radius-card); }
+.auction-card-top, .auction-card-info, .auction-specs { color: var(--color-muted); }
+.auction-card-top b, .lot-kicker b { color: var(--color-accent-dark); }
+.auction-media { border-radius: 10px; }
+.bike-card { overflow: hidden; }
+.bike-card:hover { border-color: var(--color-accent); }
+.bike-card h3, .bike-price strong, .auction-card-info h3 { color: var(--color-ink); }
+.bike-image strong { color: var(--color-ink); }
+.badge { background: rgba(255,255,255,.9); color: var(--color-accent-dark); }
+.spec-line, .auction-specs, .catalog-head { border-color: var(--color-border); color: var(--color-muted); }
+.process { background: linear-gradient(100deg, #eef3f4, #f6f7f8); }
+.steps { border-color: var(--color-border); }
+.step { border-color: var(--color-border); }
+.step > span, .timeline > div > span, .big-steps > div > span { color: var(--color-accent-dark); }
+.cta { background: var(--color-bg); }
+
+.page { background: var(--color-bg); }
+.page-hero { border-color: var(--color-border); }
+.page-hero p { color: var(--color-muted); }
+.filters input, .filters select, .bike-select, .calc-form input, .application-form input, .application-form textarea, .editor input, .editor select, .editor textarea, .admin-login input { background: var(--color-surface); border-color: var(--color-border); color: var(--color-ink); border-radius: var(--radius-control); }
+.filters button, .filter-head button { color: var(--color-muted); }
+.filter-head, .mobile-filter-button { border-color: var(--color-border); background: var(--color-surface); color: var(--color-ink); border-radius: var(--radius-control); }
+.calc-result { border-top-color: var(--color-accent); }
+.calc-result > strong { color: var(--color-ink); }
+.calc-breakdown, .detail-specs, .breakdown-total { border-color: var(--color-border); }
+.detail-main-image, .detail-gallery img, .lot-image { border-radius: var(--radius-card); overflow: hidden; }
+.detail-price { background: var(--color-surface); border-color: var(--color-accent); border-radius: var(--radius-control); }
+.detail-specs b, .detail-price strong, .lot-price strong, .lot-info h2 { color: var(--color-ink); }
+.application-section { border-color: var(--color-border); }
+.lot-layout { background: var(--color-surface); border-color: var(--color-border); border-radius: var(--radius-card); overflow: hidden; }
+.timeline, .timeline > div, .big-steps { border-color: var(--color-border); }
+.timeline > div, .big-steps > div { background: var(--color-surface); }
+.contact-card > span, .socials a { color: var(--color-accent-dark); }
+footer { border-color: var(--color-border); }
+.footer-links { color: var(--color-ink-soft); }
+.footer-links > span:first-child { color: var(--color-accent-dark); }
+.footer-bottom { border-color: var(--color-border); }
+
+.cinematic-intro { position: fixed; inset: 0; z-index: 100; overflow: hidden; display: grid; place-items: center; background: #050708; color: #fff; animation: intro-out .7s 2.25s var(--motion-standard) forwards; }
+.intro-bike { position: absolute; inset: 6% 0 0; background: radial-gradient(ellipse at 52% 60%, rgba(32,209,227,.16), transparent 25%), url('/assets/hero-generated.png') center/cover no-repeat; filter: grayscale(.2) contrast(1.15) brightness(.38); transform: scale(1.08); animation: intro-bike 2.6s var(--motion-standard) forwards; }
+.intro-light { position: absolute; z-index: 1; width: 24vw; height: 24vw; max-width: 320px; max-height: 320px; border-radius: 50%; left: 51%; top: 54%; background: radial-gradient(circle, rgba(255,255,255,.95), rgba(32,209,227,.5) 14%, transparent 65%); filter: blur(8px); mix-blend-mode: screen; opacity: 0; animation: headlight 2.1s .35s var(--motion-standard) forwards; }
+.intro-copy { position: relative; z-index: 2; display: grid; gap: 14px; width: min(90%, var(--content-max)); align-self: end; padding-bottom: 12vh; letter-spacing: -.04em; }
+.intro-copy strong { font-size: clamp(50px, 10vw, 140px); line-height: .85; letter-spacing: -.1em; animation: intro-copy-in 1s .8s both var(--motion-standard); }
+.intro-copy > span:last-child { font-size: clamp(14px, 2vw, 23px); color: var(--color-accent); letter-spacing: .08em; animation: intro-copy-in 1s 1.15s both var(--motion-standard); }
+.intro-kicker { font: 10px 'DM Mono'; letter-spacing: .14em; color: rgba(255,255,255,.66); animation: intro-copy-in 1s .55s both var(--motion-standard); }
+.intro-skip { position: absolute; z-index: 3; right: 24px; bottom: 24px; min-height: 44px; padding: 0 15px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.08); color: #fff; font: 10px 'DM Mono'; cursor: pointer; }
+
+@keyframes headlight { 0%, 28% { opacity: 0; transform: scale(.65); } 52%, 100% { opacity: 1; transform: scale(1); } }
+@keyframes intro-bike { from { transform: scale(1.12); filter: grayscale(1) contrast(1.1) brightness(.12); } to { transform: scale(1); filter: grayscale(.2) contrast(1.15) brightness(.52); } }
+@keyframes intro-copy-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes intro-out { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+
+@media (max-width: 980px) {
+  .site-header { top: 0; width: 100%; border-radius: 0; border-left: 0; border-right: 0; }
+  .site-header nav { top: 68px; min-height: calc(100svh - 68px); padding: 32px 24px max(32px, env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(20px); }
+  .site-header nav > a { color: var(--color-ink); font-size: clamp(22px, 6vw, 34px); letter-spacing: -.05em; padding: 16px 0; border-bottom-color: var(--color-border); }
+  .site-header nav .button { margin-top: 24px; }
+  .hero { height: 760px; min-height: 0; padding: 118px 24px 92px; }
+  .hero-image { background-position: 68% center; }
+}
+@media (max-width: 560px) {
+  .site-header { height: 64px; padding: 0 16px; }
+  .brand img { width: 126px; }
+  .site-header nav { top: 64px; min-height: calc(100svh - 64px); }
+  .hero { height: 690px; padding: 102px 20px 68px; align-items: end; }
+  .hero-image { background-position: 64% center; background-size: auto 100%; }
+  .hero h1 { font-size: clamp(50px, 14vw, 68px); line-height: .95; }
+  .hero-content > p { margin: 18px 0; }
+  .actions { max-width: none; }
+  .hero-route { left: 20px; bottom: 22px; }
+  .hero + .stats { margin-top: 0; }
+  .section { padding: var(--space-8) 0; }
+  .cinematic-intro .intro-bike { inset: 12% -38% 0; background-position: 58% center; }
+  .intro-copy { padding-bottom: 18vh; }
+  .intro-copy strong { font-size: 56px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-intro, .intro-bike, .intro-light, .intro-copy strong, .intro-copy > span { animation: none; }
+  .cinematic-intro { display: none; }
+}
