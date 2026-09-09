@@ -278,3 +278,45 @@ footer { border-color: var(--color-border); }
   .step p { font-size: 11px; margin-top: 6px; }
   .cta { padding-top: 76px; padding-bottom: 80px; }
 }
+
+/* Mobile typography and hero visual correction. Never break Russian words. */
+h1, h2, h3, p { word-break: normal; overflow-wrap: normal; hyphens: none; }
+@media (max-width: 560px) {
+  .hero {
+    height: 740px;
+    grid-template-rows: auto minmax(300px, 1fr) auto;
+  }
+  .hero h1 { font-size: clamp(48px, 13vw, 62px); line-height: .98; max-width: 340px; }
+  .hero-content > p { font-size: 15px; line-height: 1.65; max-width: 340px; }
+  .hero-image {
+    height: 320px;
+    width: 100%;
+    opacity: .92;
+    mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  }
+  .hero-image img {
+    width: 148%;
+    height: 148%;
+    object-position: center right;
+    transform: translate(8%, 5%);
+  }
+  .intro h2, .featured h2, .process h2, .cta h2, .auction-intro h2, .auction-timeline h2 {
+    font-size: clamp(35px, 9.7vw, 46px);
+    line-height: 1.04;
+    max-width: 350px;
+    overflow-wrap: normal !important;
+  }
+  .page-hero h1, .calc-form h2 { font-size: clamp(38px, 10.5vw, 48px); line-height: 1.04; overflow-wrap: normal !important; }
+  .auction-sheet-row h2 { font-size: clamp(35px, 9.7vw, 44px); line-height: 1.04; overflow-wrap: normal !important; }
+  .intro-copy p, .auction-intro p, .process p, .cta p, .sheet-side p, .simple-content p { font-size: 15px; line-height: 1.7; }
+  .eyebrow, .muted, .stats small, .hero-route { font-size: 10px; }
+  .sheet-facts b, .inspection-list b { font-size: 17px; }
+}
+@media (max-width: 360px) {
+  .hero { height: 700px; grid-template-rows: auto minmax(270px, 1fr) auto; }
+  .hero h1 { font-size: 47px; }
+  .hero-image { height: 285px; }
+  .hero-image img { width: 142%; height: 142%; }
+  .intro h2, .featured h2, .process h2, .cta h2, .auction-intro h2, .auction-timeline h2 { font-size: 34px; }
+  .page-hero h1, .calc-form h2 { font-size: 37px; }
+}
