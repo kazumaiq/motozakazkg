@@ -18,12 +18,4 @@ export const siteConfig = {
   ],
 };
 
-export const calculatorConfig = {
-  auctionFee: 15000,
-  japanDelivery: 18000,
-  freight: 65000,
-  customs: 45000,
-  kyrgyzDelivery: 12000,
-  serviceFee: 35000,
-  usdKgs: 89,
-};
+export { calculatorConfig } from './calculator';
